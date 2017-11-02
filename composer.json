@@ -1,0 +1,21 @@
+{
+    "name": "2latlantik/data-base-manager",
+    "description": "Simplify connection ton database, manage table and building requests",
+    "authors": [
+        {
+            "name": "Nicolas",
+            "email": "nicolascoudenne@gmail.com"
+        }
+    ],
+    "autoload": {
+      "psr-4": {
+        "App\\": "src",
+        "Tests\\": "tests"
+      }
+    },
+    "require": {},
+    "require-dev": {
+        "squizlabs/php_codesniffer": "^3.0",
+        "phpunit/phpunit": "^6.4"
+    }
+}
