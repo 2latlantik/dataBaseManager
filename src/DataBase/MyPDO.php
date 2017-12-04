@@ -26,7 +26,16 @@ class MyPDO extends PDO
      */
     public function __construct(Config $config)
     {
-        parent::__construct($config->getDsn(), $config->getUsername(), $config->getPassword(), $config->getOptions());
+        try {
+            parent::__construct(
+                $config->getDsn(),
+                $config->getUsername(),
+                $config->getPassword(),
+                $config->getOptions()
+            );
+        } catch (\Exception $e) {
+            echo $e->getMessage();
+        }
         $this->config = $config;
     }
 
